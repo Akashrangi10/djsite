@@ -27,10 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 MEDIA_ROOT = r"C:/Users/Admin/Desktop/Desk files/Akash_Work/Django/media/"
 RESOURCES_ROOT = r"C:/Users/Admin/Desktop/Desk files/Akash_Work/Django/resources/"
-STATIC_ROOT = r"C:/Users/Admin/Desktop/Desk files/Akash_Work/Django/static/"
+# STATIC_ROOT = r"C:/Users/Admin/Desktop/Desk files/Akash_Work/Django/static/"
 
 MEDIA_URL = r"C:/Users/Admin/Desktop/Desk files/Akash_Work/Django/media/"
 
@@ -62,7 +67,7 @@ ROOT_URLCONF = 'djsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ BASE_DIR / 'templates' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
